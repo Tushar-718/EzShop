@@ -27,9 +27,13 @@ const OrderSchema = new Schema({
             "Delivered",
             "Cancelled",
         ],
-        default: "oder Placed",
+        default: "Order Placed",
         required: true,
     },
     createdAt: { type: Date, default: Date.now() },
     updatedAt: { type: Date, default: Date.now() }
 });
+
+const Order = mongoose.model("Order", OrderSchema)
+
+export default Order;
